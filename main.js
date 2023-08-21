@@ -14,23 +14,26 @@ let cantidad = 0;
 let comida = "0";
 
 while(salida){
-    let Nusuario = prompt("Bienvenido al Bufet!!! <Ingreso de PEDIDO> \n\nSocios       - <Ingrese su numero de socio>\nInvitados   - <Ingrese 0>\nSalir         - <Presione X>\n\n\nSocios 20% de descuento ").trim();
+    let Nusuario = prompt("Bienvenido al Bufet!!! <Ingreso de PEDIDO> \n\nSocios       - <Ingrese su numero de socio>\nInvitados   - <Ingrese 0>\nSalir         - <Presione X>\n\n\nSocios 20% de descuento ");
     if (Nusuario == "x" || Nusuario == "X"){
         salida=false;
+    } else {
+        if (Nusuario == null || Nusuario == undefined){
+            Nusuario = "vacio";
         }
-    /*else{
-         if (Nusuario==0) {
-             apeynom=prompt("Ingrese su nombre y apellido");      
-         } else {
             switch(Nusuario){
+                case "0":
+                    apeynom=prompt("Ingrese su nombre y apellido"); 
+                    break;
                 case "1":
                     break;
                 case "2":
                     break;
+                case "vacio" :
+                    break;
             }
-         }  
-        let password = prompt ("Ingrese su contraseña").trim();
-        }
-        */
+    }  
+        //let password = prompt ("Ingrese su contraseña").trim();
+}       
 
-}
+
